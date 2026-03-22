@@ -5,13 +5,13 @@
 class LlmLog < Formula
   desc "Local proxy that tracks tokens, costs, prompts and responses across all LLM API calls"
   homepage "https://github.com/lanesket/llm.log"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lanesket/llm.log/releases/download/v0.3.0/llm.log_darwin_amd64.tar.gz"
-      sha256 "a85c9b2b7666b1fe663f8057415b9b2b755bc048c9776de3657acc6e80d63fd6"
+      url "https://github.com/lanesket/llm.log/releases/download/v0.4.0/llm.log_darwin_amd64.tar.gz"
+      sha256 "80d409cdc5c73496561f0fd2ef33afa97896008197bb7adfae9c21b42478caec"
 
       define_method(:install) do
         bin.install "llm-log"
@@ -21,8 +21,8 @@ class LlmLog < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lanesket/llm.log/releases/download/v0.3.0/llm.log_darwin_arm64.tar.gz"
-      sha256 "12b4a36ce8df138375c397fadec98a3631174b508ffdf7e38505dce190f69279"
+      url "https://github.com/lanesket/llm.log/releases/download/v0.4.0/llm.log_darwin_arm64.tar.gz"
+      sha256 "c5e9bfb015e5dd6926d33baf4c5420142e2c913867e58fa7d6f26286f6daedb6"
 
       define_method(:install) do
         bin.install "llm-log"
@@ -35,8 +35,8 @@ class LlmLog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lanesket/llm.log/releases/download/v0.3.0/llm.log_linux_amd64.tar.gz"
-      sha256 "6b0407dd041724818a4af38c7f5848c02f60eb119e9c6aae7db5066ebab5c4f4"
+      url "https://github.com/lanesket/llm.log/releases/download/v0.4.0/llm.log_linux_amd64.tar.gz"
+      sha256 "23e53198063782a250eda49654dbe34305187d701be19dd9f5fb220cafac3b7a"
       define_method(:install) do
         bin.install "llm-log"
         bash_completion.install "completions/llm-log.bash" => "llm-log"
@@ -45,8 +45,8 @@ class LlmLog < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lanesket/llm.log/releases/download/v0.3.0/llm.log_linux_arm64.tar.gz"
-      sha256 "a290fb653977d0ab518b46ecaa6f9c81b3383822485738e196b96ef8d592ab6b"
+      url "https://github.com/lanesket/llm.log/releases/download/v0.4.0/llm.log_linux_arm64.tar.gz"
+      sha256 "7ecb7e90b7d98ad4d0e7cf5e56fd35156d1d205c4fb2329261f2dcad8ceecbd3"
       define_method(:install) do
         bin.install "llm-log"
         bash_completion.install "completions/llm-log.bash" => "llm-log"
